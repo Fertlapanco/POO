@@ -1,0 +1,43 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>0</x><y>306</y><w>306</w><h>207</h></coordinates><panel_attributes>antagonista 
+--
+- dir: Number                |
+| - limite_der: int            |
+| - limite_izq: int            |
+| - vel: int                   |
+| - cambia: Timer              |
+| - tipo: Number               |
+| - lanzar: Timer 
+--
++ antagonista()             
+| + cambia_dir(e: TimerEvent) 
+| + actualiza(e: Event)        
+| + lanza_bala(e: TimerEvent)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>54</y><w>189</w><h>171</h></coordinates><panel_attributes>setup
+--
+ - escenario_new: escenario         |
+| - piso_new: piso                   |
+| - antagonista_new: antagonista     |
+| + protagonista_new: protagonista   |
+| + puntos: Number                   |
+| + puntos_box_new: puntos_box 
+--
+ + setup()                          |
+| + actualiza_puntos(e: Event): void
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>351</x><y>306</y><w>270</w><h>180</h></coordinates><panel_attributes>protagonista 
+--
++ protagonista()                   |
+| + motor(e: Event): void             |
+| + controles(): void                 |
+| + keydown(e: KeyboardEvent): void   |
+| + keyup(e: KeyboardEvent): void --
+--
+ - izq: Boolean                     |
+| - der: Boolean                     |
+| - vel: int                         |
+| - lim_x_der: int                   |
+| - limite_x_izq: int  </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>675</x><y>315</y><w>189</w><h>171</h></coordinates><panel_attributes>Bala                       
+--
+| - vel: Number    
+--
+| + bala(pos_x, pos_y)                  
+| + mover(e: Event)                     
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>189</y><w>27</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>162</y><w>180</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>180;160;180;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>612</x><y>378</y><w>81</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>135</y><w>297</w><h>198</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;200;10;10;310;10</additional_attributes></element></diagram>
